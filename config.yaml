@@ -1,0 +1,15 @@
+yolo:
+  model: yolov8n.pt  # Model size options: yolov8n.pt, yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt
+  confidence: 0.25   # Detection confidence threshold
+  iou: 0.45          # NMS IOU threshold
+  classes: null      # Filter by class, i.e., [0, 15, 16] for COCO persons, cats and dogs
+
+deepsort:
+  max_age: 30        # Maximum frames to keep track alive without detection
+  min_hits: 3        # Minimum hits to start tracking
+  iou_threshold: 0.3 # Minimum IOU for match
+  max_cosine_distance: 0.4  # Threshold for cosine distance metric
+
+input:
+  source: data/data.mp4  # Path to input video file or webcam (0, 1, 2...)
+  save_results: True       # Save results to file
